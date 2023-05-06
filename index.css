@@ -1,0 +1,254 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'montserrat';
+}
+nav{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color:blueviolet;
+    color:white;
+}
+
+.nav-links{
+    display:flex;
+    justify-content: space-around;
+    width:30%;
+   /* opacity: 0; */
+   /* overflow-x:hidden; */
+}
+.nav-links li{
+    list-style: none;
+    cursor: pointer;
+}
+.nav-links a{
+    color: rgb(226, 2256, 226);
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: medium;
+    font-size: 14px;
+}
+
+.burger{
+    display: none;
+    cursor: pointer;
+    }
+    
+.burger div{
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+    transition: all 0.9s ease;
+}
+
+
+@media screen and (max-width:1024px){
+    .nav-links{
+        width:50%;
+    }
+}
+
+@media screen and (max-width:500px){
+    body{
+        overflow-x: hidden;
+    }
+    .avatar{
+        width: 200px;
+        height: 200px;
+        object-fit: cover;       
+    }
+    .rounded{
+        width: 300px;
+        height: 170px;
+    }
+    .main--part{
+        padding-top: 10px;
+    }
+    #btn--left{
+        visibility: hidden;       
+    }
+    .frontdev{
+        color:teal;
+    }
+    .about{
+        flex-flow: column-reverse;
+    }
+}
+
+@media screen and (max-width:768px){
+    body{
+        overflow-x: hidden;
+    }
+    .avatar{
+        width: 200px;
+        height: 200px;
+        object-fit: cover;       
+    }
+    .nav-links{
+      position: absolute;
+      right: 0px;
+      height:92vh; 
+      top:8vh;
+      background-color: blueviolet;
+      display:flex;
+      flex-direction: column;
+      align-items: center;
+      width: 50%;
+      transform: translateX(100%);
+      transition: transform 0.5s ease-in;
+      
+    }
+    .nav-links li{
+        opacity:0;
+    }
+    .burger{
+    display: block;
+    }
+
+}
+.nav-active{
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2{
+    opacity: 0;
+}
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px,-6px);
+}
+/* -------------------------------------------------- */
+.main--part{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 70px;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    background-color: azure;
+}
+
+.name{
+    font-size: 45px;
+}
+.avatar{
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.hello{
+    text-align: left;
+    color: white;
+    line-height: 18px;
+}
+#btn--left a{
+    width: 100px;
+    height: 30px;
+    background-color:  blueviolet;;
+    color:white;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    list-style: none;
+}
+.frontdev{
+    color: teal;
+}
+/* ------------------------------------------------------------------------------------------------ */
+/* About ME */
+.about-img{
+    height: 400px;
+    width: 300px;
+    object-fit: cover;
+    margin-top: 20px;
+}
+.about{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:50px;
+    align-items: center;
+}
+.about-detail{
+    max-width: 300px;
+}
+.about-me{
+    color: teal;
+    margin: 20px 0px;
+}
+.about-detail p{
+    font-size: small;
+    margin: 10px 0;
+}
+
+/* .......................................... */
+.text-1xl{
+text-align: center;
+color:teal;
+margin-bottom: 20px;
+font-size:25px;
+}
+.text-teal{
+    color:teal;
+}
+.services-offered{
+    padding: 50px; 
+}
+
+/* ........  */
+/* shadow-lg p-10 rounded-xl my-10 dark:bg-gray-200 */
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center ;
+    gap: 70px;
+}
+.text-center {
+    text-align: center;
+    padding:20px;
+    border-radius: 20px;
+    margin: 20px 0px;
+    width:250px;
+    background-color: rgb(245, 242, 242);
+}
+.text-gray{
+    padding: 10px 0px;
+    color: gray;
+}
+.text-teal{
+    padding: 10px 0px;
+}
+.py{
+    padding: 20px;
+}
+
+/* ........................................... */
+
+.section-flex{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+.rounded{
+    border-radius: 20px;
+}
+
